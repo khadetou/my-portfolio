@@ -25,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     @include responsive(FromXLarge) {
       max-width: 1344px;
@@ -86,6 +87,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    right: 129px;
+
+    transform: translateX(-44%);
 
     a {
       cursor: pointer;
@@ -97,6 +102,7 @@
 
     @include responsive(FromXLarge) {
       margin-left: 142px;
+      right: 159px;
     }
   }
   &__lang {
