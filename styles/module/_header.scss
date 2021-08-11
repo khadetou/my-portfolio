@@ -1,0 +1,172 @@
+.header {
+  color: #000;
+  font-weight: 500;
+  padding: 1.25rem 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: all 0.4 ease;
+  animation: positionAnim 0.45 ease;
+  margin: 0 auto;
+
+  &__container {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    max-width: container;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive(FromMedium) {
+      max-width: 780px;
+    }
+
+    @include responsive(FromLarge) {
+      max-width: 1020px;
+    }
+
+    @include responsive(FromXLarge) {
+      max-width: 1200px;
+    }
+
+    @include responsive(FromSmall) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    margin-left: 8.4375rem;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(FromLarge) {
+      display: flex;
+    }
+
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0 1.15rem;
+      cursor: pointer;
+      line-height: 1.2;
+      transition: all 0.15s;
+      text-transform: uppercase;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    margin-right: 15px;
+    background-color: $primaryColor;
+    color: $white;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.8rem;
+    margin-left: auto;
+
+    @include responsive(FromLarge) {
+      margin-left: 1rem;
+      font-size: 1rem;
+      padding: 0.7rem 1.7rem;
+      padding: 0.6rem 2.1rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      cursor: pointer;
+    }
+    @include responsive(FromSmall) {
+      margin-left: 70px;
+    }
+  }
+  &__lang {
+    text-transform: uppercase;
+    padding: 10px 0 !important;
+    display: inline-block;
+    width: 100%;
+
+    @include responsive(FromLarge) {
+      display: inline;
+      width: inherit;
+    }
+  }
+  &__selectLang {
+    display: none;
+    position: absolute;
+    right: -8px;
+    flex-direction: column;
+    background-color: $white;
+    box-shadow: 0 2px 11px rgb(28, 42, 175, 0.07);
+    color: #000;
+    width: 13rem;
+    height: 8rem;
+    border-radius: 7px;
+    top: 30px;
+    padding: 8px 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 7px;
+      z-index: -1;
+      top: -7%;
+      height: 20px;
+      width: 20px;
+      background-color: $white;
+      box-shadow: 0 4px 15px rgb(28, 42, 175, 0.15);
+      transform: rotate(45deg);
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      label {
+        margin-left: 12px;
+        cursor: pointer;
+      }
+
+      input {
+        cursor: pointer;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        margin-top: 12px;
+      }
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      padding-bottom: 7px;
+    }
+
+    &:hover {
+      display: flex;
+    }
+  }
+  &__dropdown {
+    position: relative;
+
+    &:hover .header__selectLang {
+      display: flex;
+    }
+  }
+}

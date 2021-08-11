@@ -1,0 +1,109 @@
+.mobile {
+  &__handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 26px;
+    cursor: pointer;
+    @include responsive(FromLarge) {
+      display: none;
+    }
+  }
+
+  &__drawer {
+    width: 100%;
+    height: 100%;
+    background-color: dark;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    z-index: 1;
+    cursor: pointer;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 40px 30px;
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: text_white;
+      padding: 15px 0;
+      cursor: pointer;
+      border-bottom: 1px solid #e8e5e5;
+      transition: all 0.25s;
+
+      &:hover {
+        color: $secondaryColor;
+      }
+
+      &.active {
+        color: $primaryColor;
+      }
+    }
+  }
+
+  &__menuFooter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $secondaryColor;
+    font-size: 1rem;
+    margin-right: 15px;
+    transition: all 0.25s;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+
+  &__button {
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+}
