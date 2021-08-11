@@ -1,22 +1,22 @@
 export default [
   {
     path: "home",
-    label: "Home",
+    label: { en: "Home", fr: "Accueille" },
   },
   {
     path: "services",
-    label: "Services",
+    label: { en: "Services", fr: "Services" },
   },
   {
     path: "portfolio",
-    label: "Portfolio",
+    label: { en: "Portfolio", fr: "Portfolio" },
   },
   {
     path: "about",
-    label: "About",
+    label: { en: "About", fr: "A Propos" },
   },
   {
     path: "contact",
-    label: "Contact",
+    label: { en: "Contact", fr: "Contact" },
   },
 ];

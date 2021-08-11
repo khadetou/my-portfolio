@@ -35,7 +35,7 @@ export default function Header({ className }) {
               duration={500}
               key={i}
             >
-              {menuItem.label}
+              {isEnglish ? menuItem.label.en : menuItem.label.fr}
             </Link>
           ))}
 
@@ -69,7 +69,7 @@ export default function Header({ className }) {
         </nav>
 
         <a className={header__btn} aria-label="Get Started">
-          HIRE ME
+          {isEnglish ? "HIRE ME" : "RECRUTER"}
         </a>
         <MobileDrawer />
       </div>

@@ -44,7 +44,6 @@ export default function MobileDrawer() {
     mobile__menuFooter,
     mobile__social,
     mobile__icon,
-    header__buttons,
     header__dropdown,
     header__lang,
     header__selectLang,
@@ -77,7 +76,7 @@ export default function MobileDrawer() {
                 duration={500}
                 key={i}
               >
-                {menuItem.label}
+                {isEnglish ? menuItem.label.en : menuItem.label.fr}
               </Link>
             ))}
 
