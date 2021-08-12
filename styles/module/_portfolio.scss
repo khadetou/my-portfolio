@@ -16,6 +16,8 @@
       height: 370px;
     }
     @include responsive(ToTablet) {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
       padding: 4.5rem 0;
     }
   }

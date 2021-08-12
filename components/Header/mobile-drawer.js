@@ -75,6 +75,7 @@ export default function MobileDrawer() {
                 offset={-70}
                 duration={500}
                 key={i}
+                onClick={() => setIsDrawerOpen(false)}
               >
                 {isEnglish ? menuItem.label.en : menuItem.label.fr}
               </Link>

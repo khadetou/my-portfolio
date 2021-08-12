@@ -105,7 +105,7 @@ export default function Portfolio({ isEnglish }) {
   };
 
   return (
-    <section className={`${portfolio} ${section}`}>
+    <section className={`${portfolio} ${section}`} id="portfolio">
       <div className={portfolio__bg}></div>
       <div className={container}>
         <div className={portfolio__header}>

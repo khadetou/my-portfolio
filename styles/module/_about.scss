@@ -1,0 +1,158 @@
+.about {
+  @include responsive(ToTablet) {
+    margin-top: 1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(ToLaptop) {
+      min-height: calc(100vh - 4.5rem);
+      padding-bottom: 1.5rem;
+    }
+
+    @include responsive(ToTablet) {
+      min-height: 80vh;
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  &__col1 {
+    width: 41rem;
+    margin-right: 1.5rem;
+
+    @include responsive(ToTablet) {
+      max-width: 550px;
+      margin: 0 auto;
+      width: inherit;
+    }
+  }
+
+  &__skills {
+    margin: 1.5rem 0 2.5rem 0;
+  }
+
+  &__programTitle {
+    color: $secondaryColor;
+    font-weight: 400;
+    margin: 1.5rem 0;
+  }
+
+  &__h1 {
+    font-size: 3.5625rem;
+    line-height: 0.8;
+    color: $primaryColor;
+    width: 100%;
+
+    @include responsive(ToLaptop) {
+      font-size: 2.6rem;
+      line-height: 1.2;
+    }
+    @include responsive(ToTablet) {
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__p {
+    margin: 2.15rem 0;
+    font-size: 1.25rem;
+    color: $dark2;
+    line-height: 1.6;
+
+    @include responsive(ToLaptop) {
+      margin: 1.1rem 0;
+      font-size: 1rem;
+    }
+
+    @include responsive(ToMobile) {
+      font-size: 0.92rem;
+      margin: 1.1rem 0 2.1rem 0;
+    }
+  }
+
+  &__col2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(ToTablet) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @include responsive(ToLaptop) {
+      margin-left: 1rem;
+      margin-top: 3.125rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 750px;
+      @include responsive(ToLaptop) {
+        max-width: 500px;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__h3 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    color: $primaryColor;
+    margin-bottom: 0.6rem;
+
+    @include responsive(ToLaptop) {
+      font-size: 2.1rem;
+      padding-bottom: 0.65rem;
+    }
+    @include responsive(ToMobile) {
+      font-size: 1.8rem;
+    }
+
+    &::before {
+      content: attr(data-title);
+      display: block;
+      margin-bottom: 0.4rem;
+      color: $secondaryColor;
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      @include responsive(ToLaptop) {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &__program {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 1.8rem;
+
+    @include responsive(ToTablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      height: 94px;
+      width: 94px;
+    }
+  }
+}
