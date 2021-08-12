@@ -26,4 +26,20 @@
       @content;
     }
   }
+
+  @if $bkr == ToLaptop {
+    @media screen and (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $bkr == ToTablet {
+    @media screen and (max-width: 850px) {
+      @content;
+    }
+  }
+  @if $bkr == ToMobile {
+    @media screen and (max-width: 580px) {
+      @content;
+    }
+  }
 }

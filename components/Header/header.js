@@ -4,9 +4,8 @@ import { FaCaretDown } from "react-icons/fa";
 import Logo from "components/Logo";
 import menuItems from "./header.data";
 import MobileDrawer from "./mobile-drawer";
-import { useState } from "react";
 
-export default function Header({ className }) {
+export default function Header({ className, isEnglish, setFr, setEn }) {
   const {
     header,
     header__container,
@@ -17,8 +16,6 @@ export default function Header({ className }) {
     header__dropdown,
     header__selectLang,
   } = styles;
-
-  const [isEnglish, setIsEnglish] = useState(true);
 
   return (
     <header className={`${header} ${className}`} id="header">
@@ -45,7 +42,7 @@ export default function Header({ className }) {
                 {isEnglish ? "English" : "Français"} <FaCaretDown />
               </a>
               <div className={header__selectLang}>
-                <span onClick={() => setIsEnglish(false)}>
+                <span onClick={setFr}>
                   <input
                     type="radio"
                     checked={isEnglish ? false : true}
@@ -54,7 +51,7 @@ export default function Header({ className }) {
                   />
                   <label htmlFor="fr">Français -FR</label>
                 </span>
-                <span onClick={() => setIsEnglish(true)}>
+                <span onClick={setEn}>
                   <input
                     type="radio"
                     checked={isEnglish ? true : false}

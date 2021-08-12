@@ -1,0 +1,97 @@
+.banner {
+  @include responsive(ToTablet) {
+    margin-top: 1rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 2.5fr 3.5fr;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 2.5rem;
+    text-align: left;
+    top: 6rem;
+
+    @include responsive(ToLaptop) {
+      min-height: calc(100vh - 4.5rem);
+      padding-bottom: 1.5rem;
+    }
+
+    @include responsive(ToTablet) {
+      min-height: 80vh;
+      grid-template-columns: 1fr !important;
+    }
+    @include responsive(ToMobile) {
+      padding: 0 1.25rem;
+    }
+  }
+
+  &__col1 {
+    width: 41rem;
+    margin-right: 1.5rem;
+
+    @include responsive(ToTablet) {
+      max-width: 550px;
+      margin: 0 auto;
+      width: inherit;
+    }
+  }
+
+  &__h1 {
+    font-size: 3.5625rem;
+    line-height: 0.8;
+    color: $primaryColor;
+    width: 100%;
+
+    @include responsive(ToLaptop) {
+      font-size: 2.6rem;
+      line-height: 1.2;
+    }
+    @include responsive(ToTablet) {
+      font-size: 2.3rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__p {
+    margin: 2.15rem 0;
+    font-size: 1.25rem;
+    color: $dark2;
+    line-height: 1.6;
+
+    @include responsive(ToLaptop) {
+      margin: 1.1rem 0;
+      font-size: 1rem;
+    }
+
+    @include responsive(ToMobile) {
+      font-size: 0.92rem;
+      margin: 1.1rem 0 2.1rem 0;
+    }
+  }
+
+  &__col2 {
+    margin-left: 1.5rem;
+
+    @include responsive(ToTablet) {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @include responsive(ToLaptop) {
+      margin-left: 1rem;
+      margin-top: 3.125rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 750px;
+      @include responsive(ToLaptop) {
+        max-width: 500px;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
