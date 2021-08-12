@@ -2,7 +2,9 @@ import Layout from "@/components/Layout";
 import Meta from "@/components/Meta";
 import Banner from "@/components/Banner";
 import Service from "@/components/Service";
+import Portfolio from "@/components/Portfolio";
 import { useState } from "react";
+
 export default function Home() {
   const [isEnglish, setIsEnglish] = useState(true);
 
@@ -18,6 +20,7 @@ export default function Home() {
       <Meta title="Portolio" />
       <Banner isEnglish={isEnglish} />
       <Service isEnglish={isEnglish} />
+      <Portfolio isEnglish={isEnglish} />
     </Layout>
   );
 }

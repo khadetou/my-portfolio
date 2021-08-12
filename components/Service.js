@@ -22,24 +22,24 @@ export default function Service({ isEnglish }) {
       title: "ux/ui",
       text: {
         en: "We build beautiful design for your website wich will be followed thoroughly, under your watch, every step of the project  will be sent to you in order to validate before moving to the next step.",
+        fr: "Nous faisons de jolies designs pour votre site web, vous pourrez suivre le processus en intéragissant avec nous afin d'avoir un produit conforme à votre commande.",
       },
-      fr: "",
     },
     {
       logo: "/images/google_code.svg",
       title: "Web App",
       text: {
         en: "We build fast and optimized website by using the last technologies such as Nextjs.",
+        fr: "Nous faisons des sites web rapide et optimizées en utilisant les dernieres technologies telque Nextjs.",
       },
-      fr: "",
     },
     {
       logo: "/images/ios_development.svg",
       title: "Mobile App",
       text: {
         en: "We build mobile apps to suit your needs , We turn your ideas into reality.",
+        fr: "Nous faisons des applications mobile ios, android, nous transformons vos idées en un produit fini.",
       },
-      fr: "",
     },
   ];
 
@@ -56,9 +56,11 @@ export default function Service({ isEnglish }) {
                 <div className={service__cardContent}>
                   <img src={cardItem.logo} alt={cardItem.title} />
                   <h3 className={service__cardTitle}>{cardItem.title}</h3>
-                  <p className={service__cardText}>{cardItem.text.en}</p>
+                  <p className={service__cardText}>
+                    {isEnglish ? cardItem.text.en : cardItem.text.fr}
+                  </p>
                   <a href="#" className={button}>
-                    Read more
+                    {isEnglish ? "Read more" : "Voire plus"}
                   </a>
                 </div>
               </div>
