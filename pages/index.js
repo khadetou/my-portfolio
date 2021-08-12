@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Meta from "@/components/Meta";
 import Banner from "@/components/Banner";
+import Service from "@/components/Service";
 import { useState } from "react";
 export default function Home() {
   const [isEnglish, setIsEnglish] = useState(true);
@@ -16,6 +17,7 @@ export default function Home() {
     <Layout setFr={setFr} setEn={setEn} isEnglish={isEnglish}>
       <Meta title="Portolio" />
       <Banner isEnglish={isEnglish} />
+      <Service isEnglish={isEnglish} />
     </Layout>
   );
 }

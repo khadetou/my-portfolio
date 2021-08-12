@@ -1,0 +1,127 @@
+.service {
+  margin-top: 5rem;
+  &__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__h3 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    color: $primaryColor;
+    margin-bottom: 0.6rem;
+
+    @include responsive(ToLaptop) {
+      font-size: 2.1rem;
+      padding-bottom: 0.65rem;
+    }
+    @include responsive(ToMobile) {
+      font-size: 1.8rem;
+    }
+
+    &::before {
+      content: $dataTitle;
+      display: block;
+      margin-bottom: 0.4rem;
+      color: $secondaryColor;
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+
+      @include responsive(ToLaptop) {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @include responsive(ToTablet) {
+      flex-wrap: wrap;
+    }
+  }
+  &__card {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    min-height: 520px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 34px;
+    box-shadow: 0 4px 47px rgb(28, 42, 175, 0.15);
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    @include responsive(ToLaptop) {
+      min-height: 390px;
+      max-width: 290px;
+      padding: 2.2rem 1.5rem;
+    }
+  }
+  &__cWrap {
+    position: relative;
+    margin: 1.7rem 0.8rem;
+
+    @include responsive(ToLaptop) {
+      margin: 1rem 0.6rem;
+    }
+  }
+
+  &__cardContent {
+    position: relative;
+    z-index: 2;
+
+    img {
+      width: 90px;
+      margin-bottom: 1.7rem;
+
+      @include responsive(ToLaptop) {
+        width: 65px;
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  &__cardTitle {
+    line-height: 0.8;
+    color: $dark2;
+    font-weight: 600;
+    font-size: 1.6rem;
+
+    @include responsive(ToLaptop) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__cardText {
+    font-size: 1.15rem;
+    margin: 1.8rem 0;
+    color: $dark2;
+    line-height: 1.6;
+
+    @include responsive(ToLaptop) {
+      font-size: 0.9rem;
+      margin: 1rem 0;
+    }
+    @include responsive(ToMobile) {
+      font-size: 0.92rem;
+    }
+  }
+}
