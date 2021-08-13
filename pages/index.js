@@ -4,6 +4,7 @@ import Banner from "@/components/Banner";
 import Service from "@/components/Service";
 import Portfolio from "@/components/Portfolio";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import { useState } from "react";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Service isEnglish={isEnglish} />
       <Portfolio isEnglish={isEnglish} />
       <About isEnglish={isEnglish} />
+      <Contact isEnglish={isEnglish} />
     </Layout>
   );
 }
