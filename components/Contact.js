@@ -72,7 +72,7 @@ export default function Contact({ isEnglish }) {
               <input
                 type="text"
                 className={contact__input}
-                placeholder={isEnglish ? "Last name" : "Nom"}
+                placeholder={isEnglish ? "Last Name" : "Nom"}
               />
             </div>
             <div className={contact__row}>

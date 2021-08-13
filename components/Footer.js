@@ -140,14 +140,13 @@ export default function Footer({ isEnglish }) {
           </div>
 
           <div className={`${footer__gridCol}`}>
-            <h3 className={footer__title}>Contact me</h3>
+            <h3 className={footer__title}>Get in touch</h3>
             <div className={footer__links}>
               <p className={footer__link}>+221 78 600 45 64</p>
               <p className={footer__link}>khadetou@gmail.com</p>
             </div>
           </div>
         </div>
-        <div className={footer__bottom}></div>
       </div>
     </footer>
   );

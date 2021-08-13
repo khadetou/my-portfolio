@@ -17,6 +17,11 @@ export default function Banner({ isEnglish }) {
     en: "Hello, I am Khadetou DIANIFABE, Full stack developer on MERN and WAMP stacks, game developer, mobile developer ui/ux designer,digital markter based in Senegal.",
   };
 
+  const downloadLinks = {
+    en: "https://fv6.failiem.lv/down.php?i=bsw8zp28n",
+    fr: "https://fv6.failiem.lv/down.php?i=fwz6fj8br",
+  };
+
   return (
     <div className={banner} id="home">
       <div className={`${container} ${banner__container}`}>
@@ -24,7 +29,10 @@ export default function Banner({ isEnglish }) {
           <h1 className={banner__h1}>Khadetou Dianifabe</h1>
           <p className={banner__p}>{isEnglish ? txt.en : txt.fr}</p>
 
-          <a href="#" className={button}>
+          <a
+            href={isEnglish ? downloadLinks.en : downloadLinks.fr}
+            className={button}
+          >
             {isEnglish ? "Dowload cv" : "Telechager cv"}
           </a>
         </div>

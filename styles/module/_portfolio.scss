@@ -112,6 +112,11 @@
     padding: 1rem 1.2rem;
     display: flex;
     justify-content: center;
+    transition: all ease 0.3s;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
 
     @include responsive(ToLaptop) {
       padding: 0.8rem;

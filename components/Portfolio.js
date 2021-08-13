@@ -1,5 +1,6 @@
 import styles from "@/styles/style.module.scss";
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function Portfolio({ isEnglish }) {
   const {
@@ -39,52 +40,43 @@ export default function Portfolio({ isEnglish }) {
       img: "/images/ui.png",
       title: "web dev",
       name: "Proshop",
-      link: "http://senproshop.herokuapp.com/",
+      link: { available: true, path: "http://senproshop.herokuapp.com/" },
     },
     {
       img: "/images/ui.png",
       title: "web dev",
       name: "Dj Events",
-      link: "https://sendj-events-next-js.vercel.app/",
+      link: {
+        available: true,
+        path: "https://sendj-events-next-js.vercel.app/",
+      },
     },
     {
       img: "/images/ui.png",
       title: "web dev",
       name: "Blog",
-      link: "https://next-markdown-blog-nine.vercel.app/",
-    },
-    {
-      img: "/images/ui.png",
-      title: "web dev",
-      name: "devconnectors",
-      link: "#",
-      style: {
-        position: "absolute",
-        left: "0px",
-        top: "447px",
+      link: {
+        available: true,
+        path: "https://next-markdown-blog-nine.vercel.app/",
       },
     },
     {
       img: "/images/ui.png",
       title: "web dev",
-      name: "devconnectors",
-      link: "#",
-      style: {
-        position: "absolute",
-        left: "447.953px",
-        top: "447px",
-      },
+      name: "Bookit",
+      link: { available: false, path: "/portfolio" },
+    },
+    {
+      img: "/images/ui.png",
+      title: "web dev",
+      name: "MarketPlace",
+      link: { available: false, path: "/portfolio" },
     },
     {
       img: "/images/ui.png",
       title: "web dev",
       name: "devconnectors",
-      link: "#",
-      style: {
-        position: "absolute",
-        left: "895.906px",
-        top: "447px",
-      },
+      link: { available: false, path: "/portfolio" },
     },
   ];
 
@@ -142,12 +134,21 @@ export default function Portfolio({ isEnglish }) {
                   <h3 className={portfolio__title}>{item.title}</h3>
                   <div className={portfolio__btnContainer}>
                     <span className={portfolio__project}>{item.name}</span>
-                    <a
-                      href={item.link}
-                      className={`${button} ${portfolio__btn}`}
-                    >
-                      View Demo
-                    </a>
+                    {item.link.available ? (
+                      <a
+                        href={item.link.path}
+                        className={`${button} ${portfolio__btn}`}
+                      >
+                        View Demo
+                      </a>
+                    ) : (
+                      <Link href={item.link.path}>
+                        <a className={`${button} ${portfolio__btn}`}>
+                          {" "}
+                          View Demo
+                        </a>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
