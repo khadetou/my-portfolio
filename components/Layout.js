@@ -2,6 +2,7 @@ import styles from "@/styles/style.module.scss";
 import { Fragment, useState } from "react";
 import Sticky from "react-stickynode";
 import Header from "./header/header";
+import Footer from "./Footer";
 
 export default function Layout({ children, isEnglish, setFr, setEn }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -26,6 +27,7 @@ export default function Layout({ children, isEnglish, setFr, setEn }) {
         />
       </Sticky>
       <main id="content">{children}</main>
+      <Footer isEnglish={isEnglish} />
     </Fragment>
   );
 }
