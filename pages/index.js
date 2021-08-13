@@ -5,6 +5,7 @@ import Service from "@/components/Service";
 import Portfolio from "@/components/Portfolio";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Hireme from "@/components/Hireme";
 import { useState } from "react";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <Portfolio isEnglish={isEnglish} />
       <About isEnglish={isEnglish} />
       <Contact isEnglish={isEnglish} />
+      <Hireme isEnglish={isEnglish} />
     </Layout>
   );
 }

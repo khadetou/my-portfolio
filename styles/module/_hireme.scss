@@ -1,0 +1,41 @@
+.hireme {
+  padding: 12rem 0;
+  text-align: center;
+  @include responsive(ToLaptop) {
+    padding: 8rem 0;
+  }
+  &__title {
+    position: relative;
+    display: inline-block;
+    color: $primaryColor;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+    margin-bottom: 1.3rem;
+
+    @include responsive(ToLaptop) {
+      font-size: 2.1rem;
+      padding-bottom: 0.65rem;
+    }
+    @include responsive(ToMobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    color: $dark2;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 1.6rem auto;
+
+    @include responsive(ToLaptop) {
+      font-size: 1rem;
+    }
+
+    @include responsive(ToMobile) {
+      font-size: 0.92rem;
+    }
+  }
+}

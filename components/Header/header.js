@@ -65,9 +65,18 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
           </div>
         </nav>
 
-        <a className={header__btn} aria-label="Get Started">
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className={header__btn}
+          aria-label="Get Started"
+        >
           {isEnglish ? "HIRE ME" : "RECRUTER"}
-        </a>
+        </Link>
         <MobileDrawer />
       </div>
     </header>
