@@ -1,4 +1,5 @@
 import styles from "@/styles/style.module.scss";
+import Link from "next/link";
 
 export default function Service({ isEnglish }) {
   const {
@@ -59,9 +60,11 @@ export default function Service({ isEnglish }) {
                   <p className={service__cardText}>
                     {isEnglish ? cardItem.text.en : cardItem.text.fr}
                   </p>
-                  <a href="#" className={button}>
-                    {isEnglish ? "Read more" : "Voire plus"}
-                  </a>
+                  <Link href="/hotcodes">
+                    <a className={button}>
+                      {isEnglish ? "Read more" : "Voire plus"}
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

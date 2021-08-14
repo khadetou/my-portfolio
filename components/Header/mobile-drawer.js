@@ -110,7 +110,7 @@ export default function MobileDrawer() {
               </div>
             </div>
           </div>
-          <div className={mobile__menuFooter}>
+          {/* <div className={mobile__menuFooter}>
             <div className={mobile__social}>
               {socials.map((socialItem, i) => (
                 <span key={i} className={mobile__icon}>
@@ -118,7 +118,7 @@ export default function MobileDrawer() {
                 </span>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </Scrollbars>
     </Drawer>

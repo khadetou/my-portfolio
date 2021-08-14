@@ -154,7 +154,7 @@ export default function About({ isEnglish }) {
           </a>
         </div>
         <div className={about__col2}>
-          <img src="/images/pp.png" title="profile" />
+          <img src="/images/pp.png" alt="profile" />
         </div>
       </div>
     </div>

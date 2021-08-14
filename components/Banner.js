@@ -18,7 +18,7 @@ export default function Banner({ isEnglish }) {
   };
 
   const downloadLinks = {
-    en: "https://fv6.failiem.lv/down.php?i=bsw8zp28n",
+    en: "https://fv6.failiem.lv/down.php?i=zvm68qsjn",
     fr: "https://fv6.failiem.lv/down.php?i=fwz6fj8br",
   };
 
@@ -37,7 +37,7 @@ export default function Banner({ isEnglish }) {
           </a>
         </div>
         <div className={banner__col2}>
-          <img src="/images/profile.png" title="profile" />
+          <img src="/images/profile.png" alt="profile" />
         </div>
       </div>
     </div>

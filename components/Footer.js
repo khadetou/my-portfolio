@@ -22,18 +22,22 @@ export default function Footer({ isEnglish }) {
     {
       name: "facebook",
       img: "/images/facebook.svg",
+      link: "https://www.facebook.com/khadetou.dianifabe",
     },
     {
       name: "instagram",
       img: "/images/instagram.svg",
+      link: "https://www.instagram.com/khadet9329/",
     },
     {
       name: "github",
       img: "/images/github.svg",
+      link: "https://github.com/khadetou",
     },
     {
       name: "behance",
       img: "/images/behance.svg",
+      link: "https://www.behance.net/khadetodianifa",
     },
   ];
 
@@ -102,7 +106,7 @@ export default function Footer({ isEnglish }) {
 
             <div className={footer__icons}>
               {icons.map((icon, idx) => (
-                <a key={idx} href="#" className={footer__icon}>
+                <a key={idx} href={icon.link} className={footer__icon}>
                   <img src={icon.img} alt={icon.name} />
                 </a>
               ))}
