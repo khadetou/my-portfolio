@@ -38,13 +38,13 @@ export default function Portfolio({ isEnglish }) {
   const data = [
     {
       img: "/images/ui.png",
-      title: { en: "web dev", fr: "projet web" },
+      title: { en: "web project", fr: "projet web" },
       name: "Proshop",
       link: { available: true, path: "http://senproshop.herokuapp.com/" },
     },
     {
       img: "/images/ui.png",
-      title: { en: "web dev", fr: "projet web" },
+      title: { en: "web project", fr: "projet web" },
       name: "Dj Events",
       link: {
         available: true,
@@ -53,7 +53,7 @@ export default function Portfolio({ isEnglish }) {
     },
     {
       img: "/images/ui.png",
-      title: { en: "web dev", fr: "projet web" },
+      title: { en: "web project", fr: "projet web" },
       name: "Blog",
       link: {
         available: true,
@@ -62,19 +62,19 @@ export default function Portfolio({ isEnglish }) {
     },
     {
       img: "/images/ui.png",
-      title: { en: "web dev", fr: "projet web" },
+      title: { en: "web project", fr: "projet web" },
       name: "Bookit",
       link: { available: false, path: "/portfolio" },
     },
     {
       img: "/images/ui.png",
-      title: { en: "web dev", fr: "projet web" },
+      title: { en: "web project", fr: "projet web" },
       name: "MarketPlace",
       link: { available: false, path: "/portfolio" },
     },
     {
       img: "/images/ui.png",
-      title: { en: "web dev", fr: "projet web" },
+      title: { en: "web project", fr: "projet web" },
       name: "devconnectors",
       link: { available: false, path: "/portfolio" },
     },

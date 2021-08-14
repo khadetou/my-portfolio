@@ -39,7 +39,7 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
           <div className={header__buttons}>
             <div className={header__dropdown}>
               <a className={header__lang}>
-                {isEnglish ? "English" : "Français"} <FaCaretDown />
+                {isEnglish ? "Anglais" : "Français"} <FaCaretDown />
               </a>
               <div className={header__selectLang}>
                 <span onClick={setFr}>
