@@ -19,8 +19,8 @@ export default function Banner({ isEnglish }) {
   };
 
   const downloadLinks = {
-    en: "https://fv6.failiem.lv/down.php?i=zvm68qsjn",
-    fr: "https://fv6.failiem.lv/down.php?i=fwz6fj8br",
+    en: "https://fv2-1.failiem.lv/down.php?i=pghsq4wms",
+    fr: "https://fv2-2.failiem.lv/down.php?i=c4czqapa8",
   };
 
   return (
