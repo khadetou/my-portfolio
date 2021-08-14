@@ -49,7 +49,7 @@ export default function Service({ isEnglish }) {
     <section className={`${service} ${section}`} id="services">
       <div className={container}>
         <div className={service__header}>
-          <h3 className={service__h3}>Services</h3>
+          <h3 className={`${service__h3} notranslate`}>Services</h3>
         </div>
         <div className={service__cards}>
           {cards.map((cardItem, idx) => (
@@ -62,7 +62,9 @@ export default function Service({ isEnglish }) {
                     width={90}
                     height={90}
                   />
-                  <h3 className={service__cardTitle}>{cardItem.title}</h3>
+                  <h3 className={`${service__cardTitle} notranslate`}>
+                    {cardItem.title}
+                  </h3>
                   <p className={service__cardText}>
                     {isEnglish ? cardItem.text.en : cardItem.text.fr}
                   </p>

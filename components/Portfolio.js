@@ -145,7 +145,6 @@ export default function Portfolio({ isEnglish }) {
                     ) : (
                       <Link href={item.link.path}>
                         <a className={`${button} ${portfolio__btn}`}>
-                          {" "}
                           View Demo
                         </a>
                       </Link>

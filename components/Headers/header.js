@@ -31,6 +31,7 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
               offset={-70}
               duration={500}
               key={i}
+              className="notranslate"
             >
               {isEnglish ? menuItem.label.en : menuItem.label.fr}
             </Link>
@@ -39,7 +40,7 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
           <div className={header__buttons}>
             <div className={header__dropdown}>
               <a className={header__lang}>
-                {isEnglish ? "Anglais" : "Français"} <FaCaretDown />
+                {isEnglish ? "English" : "Français"} <FaCaretDown />
               </a>
               <div className={header__selectLang}>
                 <span onClick={setFr}>
@@ -49,7 +50,9 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
                     onChange={() => {}}
                     id="fr"
                   />
-                  <label htmlFor="fr">Français -FR</label>
+                  <label htmlFor="fr" className="notranslate">
+                    Français -FR
+                  </label>
                 </span>
                 <span onClick={setEn}>
                   <input
@@ -58,7 +61,9 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
                     id="en"
                     onChange={() => {}}
                   />
-                  <label htmlFor="en">English -En</label>
+                  <label htmlFor="en" className="notranslate">
+                    English -EN
+                  </label>
                 </span>
               </div>
             </div>
@@ -72,7 +77,7 @@ export default function Header({ className, isEnglish, setFr, setEn }) {
           smooth={true}
           offset={-70}
           duration={500}
-          className={header__btn}
+          className={`${header__btn} notranslate`}
           aria-label="Get Started"
         >
           {isEnglish ? "HIRE ME" : "RECRUTER"}

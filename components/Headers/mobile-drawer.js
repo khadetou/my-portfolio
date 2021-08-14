@@ -73,6 +73,7 @@ export default function MobileDrawer() {
                 duration={500}
                 key={i}
                 onClick={() => setIsDrawerOpen(false)}
+                className="notranslate"
               >
                 {isEnglish ? menuItem.label.en : menuItem.label.fr}
               </Link>
@@ -80,7 +81,10 @@ export default function MobileDrawer() {
 
             <div>
               <div className={header__dropdown}>
-                <a className={header__lang} style={{ position: "relative" }}>
+                <a
+                  className={`${header__lang} notranslate`}
+                  style={{ position: "relative" }}
+                >
                   {isEnglish ? "English" : "Français"}
                   <FaCaretDown style={{ position: "absolute", right: "0" }} />
                 </a>
@@ -92,7 +96,9 @@ export default function MobileDrawer() {
                       onChange={() => {}}
                       id="fr"
                     />
-                    <label htmlFor="fr">Français -FR</label>
+                    <label htmlFor="fr" className="notranslate">
+                      Français -FR
+                    </label>
                   </span>
                   <span onClick={() => setIsEnglish(true)}>
                     <input
@@ -101,7 +107,9 @@ export default function MobileDrawer() {
                       id="en"
                       onChange={() => {}}
                     />
-                    <label htmlFor="en">English -En</label>
+                    <label htmlFor="en" className="notranslate">
+                      English -En
+                    </label>
                   </span>
                 </div>
               </div>
