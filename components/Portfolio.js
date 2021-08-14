@@ -38,13 +38,13 @@ export default function Portfolio({ isEnglish }) {
   const data = [
     {
       img: "/images/ui.png",
-      title: "web dev",
+      title: { en: "web dev", fr: "projet web" },
       name: "Proshop",
       link: { available: true, path: "http://senproshop.herokuapp.com/" },
     },
     {
       img: "/images/ui.png",
-      title: "web dev",
+      title: { en: "web dev", fr: "projet web" },
       name: "Dj Events",
       link: {
         available: true,
@@ -53,7 +53,7 @@ export default function Portfolio({ isEnglish }) {
     },
     {
       img: "/images/ui.png",
-      title: "web dev",
+      title: { en: "web dev", fr: "projet web" },
       name: "Blog",
       link: {
         available: true,
@@ -62,19 +62,19 @@ export default function Portfolio({ isEnglish }) {
     },
     {
       img: "/images/ui.png",
-      title: "web dev",
+      title: { en: "web dev", fr: "projet web" },
       name: "Bookit",
       link: { available: false, path: "/portfolio" },
     },
     {
       img: "/images/ui.png",
-      title: "web dev",
+      title: { en: "web dev", fr: "projet web" },
       name: "MarketPlace",
       link: { available: false, path: "/portfolio" },
     },
     {
       img: "/images/ui.png",
-      title: "web dev",
+      title: { en: "web dev", fr: "projet web" },
       name: "devconnectors",
       link: { available: false, path: "/portfolio" },
     },
@@ -130,7 +130,9 @@ export default function Portfolio({ isEnglish }) {
                   />
                 </div>
                 <div className={portfolio__overlay}>
-                  <h3 className={portfolio__title}>{item.title}</h3>
+                  <h3 className={portfolio__title}>
+                    {isEnglish ? item.title.en : item.title.fr}
+                  </h3>
                   <div className={portfolio__btnContainer}>
                     <span className={portfolio__project}>{item.name}</span>
                     {item.link.available ? (
