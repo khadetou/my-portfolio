@@ -1,5 +1,4 @@
 import styles from "@/styles/style.module.scss";
-import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -25,7 +24,7 @@ export default function Portfolio({ isEnglish }) {
     portfolio__btn,
   } = styles;
 
-  const grid = useRef();
+  // const grid = useRef();
 
   // const [active, setActive] = useState({
   //   activeObj: { id: 1, data: "*", title: "All" },
@@ -119,7 +118,7 @@ export default function Portfolio({ isEnglish }) {
             </button>
           </div>
 
-          <div ref={grid} className={portfolio__grid}>
+          <div className={portfolio__grid}>
             {data.map((item, idx) => (
               <div key={idx} className={portfolio__gridItem}>
                 <div className={portfolio__galery}>

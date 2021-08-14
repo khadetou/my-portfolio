@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/Image";
+import Image from "next/image";
 import styles from "@/styles/style.module.scss";
 export default function Logo({ src, ...rest }) {
   const { logo } = styles;
