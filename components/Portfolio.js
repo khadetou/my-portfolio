@@ -1,6 +1,7 @@
 import styles from "@/styles/style.module.scss";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Portfolio({ isEnglish }) {
   const {
@@ -26,14 +27,14 @@ export default function Portfolio({ isEnglish }) {
 
   const grid = useRef();
 
-  const [active, setActive] = useState({
-    activeObj: { id: 1, data: "*", title: "All" },
-    obj: [
-      { id: 1, data: "*", title: "All" },
-      //   { id: 2, data: ".ui", title: "UI/UX" },
-      //   { id: 3, data: ".webdev", title: "Web Dev" },
-    ],
-  });
+  // const [active, setActive] = useState({
+  //   activeObj: { id: 1, data: "*", title: "All" },
+  //   obj: [
+  //     { id: 1, data: "*", title: "All" },
+  //     //   { id: 2, data: ".ui", title: "UI/UX" },
+  //     //   { id: 3, data: ".webdev", title: "Web Dev" },
+  //   ],
+  // });
 
   const data = [
     {
@@ -80,21 +81,21 @@ export default function Portfolio({ isEnglish }) {
     },
   ];
 
-  useEffect(() => {
-    setActive({ ...active, activeObj: active.obj[0] });
-  }, []);
+  // useEffect(() => {
+  //   setActive({ ...active, activeObj: active.obj[0] });
+  // }, [active]);
 
-  const toggleClass = (i) => {
-    setActive({ ...active, activeObj: active.obj[i] });
-  };
+  // const toggleClass = (i) => {
+  //   setActive({ ...active, activeObj: active.obj[i] });
+  // };
 
-  const toggleActiveClass = (i) => {
-    if (active.obj[i] === active.activeObj) {
-      return " activebtn";
-    } else {
-      return "";
-    }
-  };
+  // const toggleActiveClass = (i) => {
+  //   if (active.obj[i] === active.activeObj) {
+  //     return " activebtn";
+  //   } else {
+  //     return "";
+  //   }
+  // };
 
   return (
     <section className={`${portfolio} ${section}`} id="portfolio">
@@ -110,25 +111,24 @@ export default function Portfolio({ isEnglish }) {
         </div>
         <div className={portfolio__body}>
           <div className={portfolio__filter}>
-            {active.obj.map((button, idx) => (
-              <button
-                className={`${portfolio__filterBtn} ${toggleActiveClass(idx)}`}
-                key={idx}
-                data-filter={button.data}
-                onClick={() => {
-                  toggleClass(idx);
-                }}
-              >
-                {button.title}
-              </button>
-            ))}
+            <button
+              className={`${portfolio__filterBtn} activebtn`}
+              data-filter={button.data}
+            >
+              All
+            </button>
           </div>
 
           <div ref={grid} className={portfolio__grid}>
             {data.map((item, idx) => (
               <div key={idx} className={portfolio__gridItem}>
                 <div className={portfolio__galery}>
-                  <img src={item.img} alt="portfolio" />
+                  <Image
+                    src={item.img}
+                    alt="portfolio"
+                    width={366}
+                    height={324}
+                  />
                 </div>
                 <div className={portfolio__overlay}>
                   <h3 className={portfolio__title}>{item.title}</h3>

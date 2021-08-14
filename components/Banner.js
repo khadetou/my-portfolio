@@ -1,4 +1,5 @@
 import styles from "@/styles/style.module.scss";
+import Image from "next/image";
 
 export default function Banner({ isEnglish }) {
   const {
@@ -37,7 +38,12 @@ export default function Banner({ isEnglish }) {
           </a>
         </div>
         <div className={banner__col2}>
-          <img src="/images/profile.png" alt="profile" />
+          <Image
+            src="/images/profile.png"
+            alt="profile"
+            height={703}
+            width={536}
+          />
         </div>
       </div>
     </div>

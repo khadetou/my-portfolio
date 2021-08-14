@@ -1,6 +1,7 @@
 import styles from "@/styles/style.module.scss";
 import { Link as LS } from "react-scroll";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer({ isEnglish }) {
   const {
@@ -100,14 +101,19 @@ export default function Footer({ isEnglish }) {
               duration={500}
               aria-label="Get Started"
             >
-              <img src="/images/log.svg" alt="logo" />
+              <Image src="/images/log.svg" alt="logo" width={94} height={32} />
             </LS>
             <p className={footer__address}>Senegal Dakar, castor 1</p>
 
             <div className={footer__icons}>
               {icons.map((icon, idx) => (
                 <a key={idx} href={icon.link} className={footer__icon}>
-                  <img src={icon.img} alt={icon.name} />
+                  <Image
+                    src={icon.img}
+                    alt={icon.name}
+                    width={40}
+                    height={40}
+                  />
                 </a>
               ))}
             </div>

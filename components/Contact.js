@@ -4,6 +4,8 @@ import { useState } from "react";
 import { API_URL } from "../config";
 import "react-toastify/dist/ReactToastify.css";
 import router from "next/router";
+import Image from "next/image";
+
 export default function Contact({ isEnglish }) {
   const {
     contact,
@@ -70,6 +72,7 @@ export default function Contact({ isEnglish }) {
     } else {
       await res.json();
       router.push("/message");
+      toast.success("Message sent successfully");
     }
   };
 
@@ -97,7 +100,12 @@ export default function Contact({ isEnglish }) {
               {info.map((item, idx) => (
                 <div key={idx} className={contact__info}>
                   <div className={contact__icon}>
-                    <img src={item.img} alt={item.text} />
+                    <Image
+                      src={item.img}
+                      alt={item.text}
+                      width={67}
+                      height={67}
+                    />
                   </div>
                   <p className={contact__text}>{item.text}</p>
                 </div>

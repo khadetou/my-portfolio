@@ -1,5 +1,6 @@
 import styles from "@/styles/style.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Service({ isEnglish }) {
   const {
@@ -55,7 +56,12 @@ export default function Service({ isEnglish }) {
             <div className={service__cWrap} key={idx}>
               <div className={service__card}>
                 <div className={service__cardContent}>
-                  <img src={cardItem.logo} alt={cardItem.title} />
+                  <Image
+                    src={cardItem.logo}
+                    alt={cardItem.title}
+                    width={90}
+                    height={90}
+                  />
                   <h3 className={service__cardTitle}>{cardItem.title}</h3>
                   <p className={service__cardText}>
                     {isEnglish ? cardItem.text.en : cardItem.text.fr}

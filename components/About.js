@@ -1,4 +1,5 @@
 import styles from "@/styles/style.module.scss";
+import Image from "next/image";
 import { useState } from "react";
 export default function About({ isEnglish }) {
   const {
@@ -92,12 +93,13 @@ export default function About({ isEnglish }) {
   ];
 
   const [open, setOpen] = useState(false);
+
   return (
     <div className={about} id="about">
       <div className={about__header}>
         <h3
           className={about__h3}
-          data-title={isEnglish ? "Who Am I" : "Qui je suis"}
+          data-title={isEnglish ? "Who Am I" : "Qui suis je "}
         >
           About Me
         </h3>
@@ -109,7 +111,13 @@ export default function About({ isEnglish }) {
             <h3 className={about__programTitle}>Web technologies</h3>
             <div className={about__program}>
               {skills.map((skill, idx) => (
-                <img key={idx} src={skill.img} alt="programmation language" />
+                <Image
+                  key={idx}
+                  src={skill.img}
+                  alt="programmation language"
+                  height={94}
+                  width={94}
+                />
               ))}
             </div>
             {open ? (
@@ -117,30 +125,36 @@ export default function About({ isEnglish }) {
                 <h3 className={about__programTitle}>Mobile Technologies</h3>
                 <div className={about__program}>
                   {mobile.map((skill, idx) => (
-                    <img
+                    <Image
                       key={idx}
                       src={skill.img}
                       alt="programmation language"
+                      height={94}
+                      width={94}
                     />
                   ))}
                 </div>
                 <h3 className={about__programTitle}>Gaming Technologies</h3>
                 <div className={about__program}>
                   {gaming.map((skill, idx) => (
-                    <img
+                    <Image
                       key={idx}
                       src={skill.img}
                       alt="programmation language"
+                      height={94}
+                      width={94}
                     />
                   ))}
                 </div>
                 <h3 className={about__programTitle}>Programming languages</h3>
                 <div className={about__program}>
                   {programming.map((skill, idx) => (
-                    <img
+                    <Image
                       key={idx}
                       src={skill.img}
                       alt="programmation language"
+                      height={94}
+                      width={94}
                     />
                   ))}
                 </div>
@@ -154,7 +168,7 @@ export default function About({ isEnglish }) {
           </a>
         </div>
         <div className={about__col2}>
-          <img src="/images/pp.png" alt="profile" />
+          <Image src="/images/pp.png" alt="profile" height={703} width={536} />
         </div>
       </div>
     </div>
