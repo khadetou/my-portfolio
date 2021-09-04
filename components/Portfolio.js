@@ -51,6 +51,13 @@ export default function Portfolio({ isEnglish }) {
         path: "https://sendj-events-next-js.vercel.app/",
       },
     },
+
+    {
+      img: "/images/ui.png",
+      title: { en: "web project", fr: "projet web" },
+      name: "Bookit",
+      link: { available: false, path: "https://senbookit.vercel.app/" },
+    },
     {
       img: "/images/ui.png",
       title: { en: "web project", fr: "projet web" },
@@ -60,12 +67,7 @@ export default function Portfolio({ isEnglish }) {
         path: "https://next-markdown-blog-nine.vercel.app/",
       },
     },
-    {
-      img: "/images/ui.png",
-      title: { en: "web project", fr: "projet web" },
-      name: "Bookit",
-      link: { available: false, path: "/portfolio" },
-    },
+
     {
       img: "/images/ui.png",
       title: { en: "web project", fr: "projet web" },
