@@ -2,7 +2,7 @@
 export default [
   {
     path: "home",
-    label: { en: "Acceuille", fr: "Accueille" },
+    label: { en: "Home", fr: "Accueille" },
   },
   {
     path: "services",
