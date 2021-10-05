@@ -10,7 +10,7 @@ export default function Logo({ src, ...rest }) {
           src="/images/logo.svg"
           width={94}
           height={32}
-          alt="nextjs landing"
+          alt="nextJs landing"
         />
       </a>
     </Link>

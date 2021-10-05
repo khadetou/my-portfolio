@@ -7,7 +7,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Hireme from "@/components/Hireme";
 import { useState } from "react";
-
+import Header from "@/components/Header";
 export default function Home() {
   const [isEnglish, setIsEnglish] = useState(true);
 
