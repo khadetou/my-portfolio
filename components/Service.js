@@ -32,7 +32,7 @@ export default function Service({ isEnglish }) {
       title: "Web App",
       text: {
         en: "We build fast and optimized website by using the last technologies such as Nextjs.",
-        fr: "Nous faisons des sites web rapide et optimizées en utilisant les dernieres technologies telque Nextjs.",
+        fr: "Nous faisons des sites web rapide et optimizés en utilisant les dernieres technologies telque Nextjs.",
       },
     },
     {

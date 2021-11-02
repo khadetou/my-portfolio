@@ -18,7 +18,7 @@ export default function About({ isEnglish }) {
   } = styles;
 
   const txt = {
-    fr: "Je suis un développeur full Stack passionné par les nouvelles technologies, je suis en constance apprentissage. Mon étique de travaille fait de moi un candidat idéal.",
+    fr: "Je suis un développeur full Stack passionné par les nouvelles technologies, je suis en constant apprentissage. Mon étique de travaille fait de moi un candidat idéal pour la realisation de vos projets.",
     en: "I am a full stack developer passionate about the new technologies I do my best to improve my level every single day. I have a rigorous work ethic which makes me an incredible asset.",
   };
 
